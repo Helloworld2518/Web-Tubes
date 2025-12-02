@@ -1,0 +1,297 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*Animasi Awal*/
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/*BAGIAN BANNER*/
+#header1 {
+    background-image: url('../GAMBARHOME/ithb.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    color: white;
+    padding-top: 150px;
+    overflow: hidden;
+}
+
+#header1::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 0;
+}
+
+/*BAGIAN GAMBAR DAN NAMA*/
+#Gambar {
+    position: relative;
+    top: -30px;
+    display: flex;
+    justify-content: center;
+    opacity: 0;
+    animation: fadeInUp 1.5s ease forwards;
+    animation-delay: 0.6s;
+    z-index: 1;
+}
+
+#Gambar ul {
+    display: flex;
+    gap: 60px;
+}
+
+#Gambar li {
+    list-style: none;
+    text-align: center;
+}
+
+#Gambar img {
+    object-fit: cover;
+    width: 200px;
+    height: 300px;
+    border-radius: 16px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#Gambar img:hover {
+    transform: scale(1.05); 
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+}
+
+#Gambar ul li p {
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-bottom: 8px;
+    color: #fff;
+}
+
+/*BAGIAN KATA & */
+h1 {
+    position: relative;
+    top: 30px;
+    opacity: 0;
+    animation: fadeInUp 1.5s ease forwards;
+    animation-delay: 1s;
+    z-index: 1;
+}
+
+/*DESKRIPSI*/
+#deskripsi {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    margin: 80px auto;
+    width: 90%;
+    max-width: 900px;
+    color: rgb(29, 27, 27);
+}
+
+.profil {
+    display: flex;
+    gap: 30px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    animation: fadeInUp 1.5s ease forwards;
+}
+
+.profil img {
+    width: 200px;
+    height: 300px;
+    border-radius: 16px;
+    object-fit: cover;
+    flex-shrink: 0;
+    animation: fadeInUp 1.5s ease forwards;
+}
+
+.profil .info h1 {
+    animation: fadeInUp 1.5s ease forwards;
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.profil .info p {
+    animation: fadeInUp 1.5s ease forwards;
+    margin-top: 40px;
+    line-height: 1.5;
+}
+
+@media screen and (max-width: 720px) {
+
+    #NAV {
+    backdrop-filter: blur(10px);
+    position: fixed;
+    top: 20px;
+    width: 90%;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    animation: fadeInUp 1s ease forwards;
+    animation-delay: 0.2s;
+    opacity: 0;
+    z-index: 10;
+    border-radius: 16px;
+    background-color: rgb(255, 255, 255 , 0.3);
+    align-items: center;
+    }
+
+    
+    #header1 h1{
+        text-align: center;
+    }
+    #Gambar ul{
+        flex-direction: column;
+    }
+    .profil {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .profil img {
+        width: 80%;
+        height: auto;
+    }
+
+    .profil .info h1 {
+        margin-top: 15px;
+    }
+    .Album .cover{
+        height:150px;
+    }
+}
+/* Bagian Gallery */
+.Gallery{
+    display: grid;
+    gap: 40px;
+    background-color: grey;
+    padding-top: 30px;
+}
+.GalTitle{
+    text-align: center;
+}
+.Album{
+    width: 45%;
+    text-align: center;
+    cursor: pointer;
+    display: block;
+    float: left;
+    padding: 20px;
+    margin: 10px;
+
+}
+.Album .cover{
+position: relative;
+width: 60%;
+height: 200px;
+object-fit: cover;
+border-radius: 10px;
+transition: 0.3s;
+overflow: hidden;
+}
+.Album:hover .cover{
+    transform: scale(1.05);
+}
+/* bagian popup gallery */
+.popup{
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0,0,0,0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+.popupContent{
+    background-color: white;
+    border-radius: 15px;
+    max-width: 100%;
+    max-width: 100%;
+    overflow:auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    position: absolute;
+}
+.popupContent img {
+    width: 200px;
+    border-radius: 10px;
+}
+.close{
+    position: absolute;
+    top: 40px;
+    right: 60px;
+    font-size: 30px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+/* bagian Blog */
+.Blog {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    opacity: 0;
+    animation: fadeInUp 1.5s ease forwards;
+    animation-delay: 0.6s;
+    z-index: 1;
+    padding: 10px;
+}
+.BTitle{
+    text-align: center;
+}
+
+.Blog ul {
+    display: flex;
+}
+
+.Blog li {
+    list-style: none;
+    margin: 50px;
+}
+
+.Blog img {
+    object-fit: cover;
+    width: 200px;
+    height: 300px;
+    border-radius: 16px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.Blog img:hover {
+    transform: scale(1.05); 
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+}
+
+@media screen and (min-width: 721px) and (max-width: 1024px) {
+    /* Navigasi lebih lebar agar proporsional di tablet */
+
+    
+}

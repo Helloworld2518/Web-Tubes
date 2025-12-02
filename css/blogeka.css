@@ -1,0 +1,146 @@
+html {
+  background-image: url(../assets/blog\ eka\ background.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-blend-mode: darken;
+  color: white;
+  font-weight: bolder;
+  font-family: "Iceland", "Times New Roman", Times, serif;
+  scroll-behavior: smooth;
+  line-height: 1.5em;
+}
+/* 1. WADAH UTAMA (GRID/FLEX CONTAINER) */
+.card-container {
+  display: flex; /* Mengaktifkan mode baris */
+  flex-wrap: wrap; /* PENTING: Agar turun ke bawah di layar kecil (Responsif) */
+  justify-content: center; /* Posisi di tengah layar */
+  gap: 30px; /* Jarak antar kartu */
+  max-width: 1200px; /* Batas lebar agar tidak terlalu melebar di layar besar */
+  margin: 0 auto; /* Posisi container di tengah */
+}
+
+/* 2. KARTU INDIVIDUAL */
+.flash-card {
+  background-color: transparent;
+  width: 300px;
+  height: 400px;
+  perspective: 1000px;
+  cursor: pointer;
+}
+
+/* 3. PEMBUNGKUS DALAM (INNER WRAPPER) */
+.flash-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+}
+
+.flash-card:hover .flash-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* 4. SISI DEPAN DAN BELAKANG */
+.flash-card-front,
+.flash-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* GAYA DEPAN */
+.flash-card-front {
+  background-color: #ffffff;
+  color: #333;
+}
+
+.flash-card-front h2 {
+  margin: 0;
+  font-size: 24px;
+  color: #2c3e50;
+}
+.flash-card-front p {
+  color: #7f8c8d;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+/* GAYA BELAKANG */
+.flash-card-back {
+  background-color: #34495e; /* Warna dasar jika gambar gagal muat */
+  color: white;
+  transform: rotateY(180deg);
+  overflow: hidden;
+}
+
+.flash-card-back img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.ukfoto {
+  width: 40%;
+  padding: 1%;
+}
+
+.konten-images {
+  width: 40%;
+}
+.konten-isi {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0px;
+}
+.konten-text {
+  margin-left: 0;
+  width: 40%;
+}
+
+.swap {
+  flex-direction: row-reverse;
+}
+
+p {
+  text-align: justify;
+}
+
+.btn {
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  background-color: #04AA6D;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+a{
+ text-decoration: none;
+ color: wheat;
+}
+
+@media screen and (max-width: 640px) {
+  .konten-isi {
+    flex-direction: column;
+  }
+  .konten-text {
+    margin-left: 0;
+    width: 90%;
+  }
+}

@@ -1,0 +1,255 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+footer {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    background-color: lightgray;
+    padding: 2.5rem 2%;
+    gap: 2%;
+    flex-wrap: wrap;
+    box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.1);
+    min-height: auto;
+}
+
+.footer-col {
+    flex: 1;
+    min-width: 280px;
+    color: black;
+    font-size: 0.95rem;
+}
+
+.footer-col p {
+    margin: 0 0 1rem 0;
+    font-weight: 500;
+    line-height: 1.6;
+}
+
+.footer-nav {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    gap: 0.5rem;
+    margin: 0;
+    padding: 0;
+}
+
+.footer-nav li {
+    list-style: none;
+}
+
+.footer-nav a {
+    color: black;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    padding: 0.35rem 0.75rem;
+    border-radius: 4px;
+    display: block;
+    position: relative;
+}
+
+.footer-nav a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #ffd89b;
+    transition: width 0.3s ease;
+}
+
+.footer-nav a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.footer-nav a:hover::after {
+    width: 100%;
+}
+
+.footer-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+}
+
+.footer-form label {
+    font-weight: 500;
+    color: black;
+    font-size: 0.9rem;
+}
+
+.footer-form input[type="text"],
+.footer-form textarea,
+.footer-form select {
+    padding: 0.5rem;
+    border: none;
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 0.85rem;
+    width: 100%;
+    min-height: auto;
+}
+
+.footer-form textarea {
+    min-height: 60px;
+    resize: vertical;
+}
+
+.footer-form input[type="text"]:focus,
+.footer-form textarea:focus,
+.footer-form select:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(255, 216, 155, 0.5);
+}
+
+.form-submit {
+    background-color: #ffd89b;
+    color: #333;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    margin-top: 0.25rem;
+}
+
+.form-kirim:hover {
+    background-color: #ffe0b5;
+    transform: translateY(-1px);
+}
+
+@media (max-width: 900px) {
+    footer {
+        padding: 2rem 1.5%;
+        gap: 1.5%;
+    }
+
+    .footer-col {
+        min-width: 200px;
+    }
+
+    .footer-nav {
+        gap: 0.5rem;
+    }
+
+    .footer-nav a {
+        font-size: 0.9rem;
+        padding: 0.35rem 0.6rem;
+    }
+
+    .footer-form textarea {
+        min-height: 50px;
+    }
+}
+
+@media (max-width: 768px) {
+    footer {
+        flex-direction: column-reverse;
+        padding: 2rem 1.5rem;
+        gap: 1.5rem;
+    }
+
+    .footer-col {
+        min-width: auto;
+        width: 100%;
+    }
+
+    .footer-col p {
+        font-size: 0.95rem;
+    }
+
+    .footer-nav {
+        gap: 0.5rem;
+        flex-direction: column;
+    }
+
+    .footer-nav a {
+        font-size: 0.85rem;
+        padding: 0.35rem 0.5rem;
+    }
+
+    .footer-form {
+        gap: 0.6rem;
+    }
+
+    .footer-form label {
+        font-size: 0.85rem;
+    }
+
+    .footer-form input[type="text"],
+    .footer-form textarea,
+    .footer-form select {
+        font-size: 0.8rem;
+        padding: 0.45rem;
+    }
+
+    .footer-form textarea {
+        min-height: 45px;
+    }
+
+    .form-submit {
+        font-size: 0.85rem;
+        padding: 0.45rem 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    footer {
+        padding: 1.5rem 1rem;
+        gap: 1rem;
+    }
+
+    .footer-col p {
+        font-size: 0.85rem;
+        margin: 0 0 0.75rem 0;
+    }
+
+    .footer-nav {
+        gap: 0.5rem;
+        flex-direction: column;
+    }
+
+    .footer-nav a {
+        font-size: 0.8rem;
+        padding: 0.3rem 0.4rem;
+        display: block;
+    }
+
+    .footer-form {
+        gap: 0.5rem;
+    }
+
+    .footer-form label {
+        font-size: 0.8rem;
+    }
+
+    .footer-form input[type="text"],
+    .footer-form textarea,
+    .footer-form select {
+        font-size: 0.75rem;
+        padding: 0.4rem;
+    }
+
+    .footer-form textarea {
+        min-height: 40px;
+    }
+
+    .form-submit {
+        font-size: 0.8rem;
+        padding: 0.4rem 0.8rem;
+    }
+}

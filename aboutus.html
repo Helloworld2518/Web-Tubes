@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="css/aboutus.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <script src="assets/JQuery/jquery-3.7.1.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="site-header">
+            <nav class="navbar">
+                <div class="navbar-container">
+                    <a href="#" class="navbar-brand">ITHB Experience</a>
+                    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                        <img src="assets/menu.svg" alt="Menu" class="hamburger-icon">
+                    </button>
+                    <ul class="nav-links">
+                        <li><a href="index.html" class="nav-link">Home</a></li>
+                        <li><a href="aboutus.html" class="nav-link">About Us</a></li>
+                        <li><a href="#gallery" class="nav-link">Gallery</a></li>
+                        <li><a href="blog.html" class="nav-link">Blog</a></li>
+                        <li><a href="#contact" class="nav-link">Contact</a></li>
+                        <li>
+                            <div class="cct clock-container">
+                                <div class="icon-circle">
+                                    <img src="assets/clock.svg">
+                                </div>
+                                <div class="time-text" id="clock">
+                                    --.-- --
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+
+                </div>
+            </nav>
+        </div>
+    </header>
+    <br>
+    <h1 style="text-align: center;">Let's See Website Developer</h1>
+    <br>
+    <div id="konten">
+        <div class="box">
+            <div class="box-media">
+                <img src="assets/clayPF.JPG" alt="Clay">
+            </div>
+            <div class="box-content">
+                <button class="button" onclick="muncul()">Pencet</button>
+                <div class="info">
+                    <p>Nama: Clay Othniel Yonathan</p>
+                    <p>Tempat/Tanggal Lahir: Bandung, 18 September 2007</p>
+                    <p>Asal Sekolah: SMAK Trimulia</p>
+                    <p>Hobi: Main game dan memotret</p>
+                    <p>Fun Fact: dalam 1 event sekolah, bisa mengambil sampai 200 foto dan video sendirian</p>
+                </div>
+            </div>
+        </div>
+        <div class="box">
+            <div class="box-media">
+                <img src="assets/Daniel.jpeg" alt="Daniel">
+            </div>
+            <div class="box-content">
+                <button class="button" onclick="infodaniel()" value="mc2">Pencet</button>
+                <div class="info">
+                    <div>
+                        <p>Nama: Daniel Hamonangan Simatupang</p>
+                        <p>Tempat/Tanggal Lahir: Jakarta, 20 April 2007</p>
+                        <p>Asal Sekolah: SMAN 13 BEKASI</p>
+                        <p>Hobi: Bermain Basket , Game</p>
+                        <p>Fun Fact: Suka Mencoba Hal baru dan Senang berkumpul dengan teman yang sama sama berusaha</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="box">
+            <div class="box-media">
+                <img src="assets/eka.jpg" alt="Eka">
+            </div>
+            <div class="box-content">
+                <button class="button" onclick="muncul()" value="mc3">Pencet</button>
+                <div class="info">
+                    <div>
+                        <p>Nama: Putu Eka Adi Saputra</p>
+                        <p>Tempat/Tanggal Lahir: Bandung, 18 September 2006</p>
+                        <p>Asal Sekolah: SMAK Gamaliel</p>
+                        <p>Hobi: bermain games, utak-atik komputer</p>
+                        <p>Fun Fact: Suka Mencoba utak atik komputer, tapi kalau error gk bisa benerinnya</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer id="contact">
+        <div class="footer-col" id="col-1">
+            <p>&copy; 2025 Putu Eka, Clay Daniel HS</p>
+        </div>
+        <div class="footer-col" id="col-2">
+            <p><b>Navigation</b></p>
+            <ul class="footer-nav">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+        <div class="footer-col" id="col-3">
+            <p><b>Form Feedback</b></p>
+            <form class="footer-form" onsubmit="kirim()">
+                <div class="form-group">
+                    <label for="footer-nama">Nama:</label>
+                    <input type="text" id="footer-nama" name="nama" required>
+                </div>
+                <div class="form-group">
+                    <label for="footer-pesan">Pesan:</label>
+                    <textarea id="footer-pesan" name="pesan" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="footer-penerima">Penerima:</label>
+                    <select id="footer-penerima" name="penerima" required>
+                        <option value="">-- Pilih --</option>
+                        <option value="eka">Eka</option>
+                        <option value="clay">Clay</option>
+                        <option value="daniel">Daniel</option>
+                    </select>
+                </div>
+                <button type="submit" class="form-submit">Kirim</button>
+            </form>
+        </div>
+    </footer>
+
+</body>
+<script src="js/aboutusscript.js"></script>
+<script src="js/formscript.js"></script>
+<script src="js/script.js"></script>
+
+</html>

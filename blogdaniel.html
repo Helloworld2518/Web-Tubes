@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/blogdaniel.css">
+    <link rel="stylesheet" href="css/lagu.css">
+    <script src="js/blogdaniel.js"></script>
+    <script src="js/lagu.js"></script>
+</head>
+
+<body>
+    <div id="deskripsi">
+        <div class="profil">
+            <img src="assets/foto.jpg" alt="">
+            <div class="info">
+                <h1>Daniel Hamonangan Simatupang - 1125051</h1>
+                <p>Nama saya Daniel Hamonangan Simatupang. Saya merupakan individu yang memiliki semangat tinggi untuk
+                    mempelajari hal-hal baru dan beradaptasi dengan cepat terhadap berbagai tantangan. Saya selalu
+                    berusaha
+                    memberikan hasil kerja yang maksimal pada setiap tugas maupun proyek. Apabila suatu pekerjaan
+                    memerlukan
+                    penggunaan aplikasi atau perangkat yang belum saya kuasai, saya akan mempelajarinya secara mandiri
+                    agar
+                    dapat mencapai hasil yang optimal
+            </div>
+        </div>
+
+        <div>
+            <h2>Hobby</h2>
+            <div class="slider-container">
+                <button class="prev">❮</button>
+
+                <div class="slider">
+                    <img src="assets/gambar1.jpg" class="slide">
+                    <img src="assets/gambar2.jpg" class="slide">
+                    <img src="assets/gambar3.jpg" class="slide">
+                    <img src="assets/gambar4.jpg" class="slide">
+                    <img src="assets/gambar5.jpg" class="slide">
+                </div>
+
+                <button class="next">❯</button>
+            </div>
+        </div>
+
+        <div>
+            <div class="music-section">
+                <h2>Lagu Favorit Saya</h2>
+
+                <div class="song" onclick="playSong(0)">
+                    <img src="assets/aboutyou.jpg" class="cover">
+                    <div class="info">
+                        <h3>About You</h3>
+                        <p>The 1975</p>
+                    </div>
+                    <button class="play-btn" id="btn0">▶</button>
+                </div>
+
+                <div class="song" onclick="playSong(1)">
+                    <img src="assets/high.png" class="cover">
+                    <div class="info">
+                        <h3>Why You only Call me when you high</h3>
+                        <p>Artic Monkeys</p>
+                    </div>
+                    <button class="play-btn" id="btn1">▶</button>
+                </div>
+                <div class="song" onclick="playSong(2)">
+                    <img src="assets/gone.jpg" class="cover">
+                    <div class="info">
+                        <h3>Gone Gone Gone</h3>
+                        <p>Philip Philips</p>
+                    </div>
+                    <button class="play-btn" id="btn2">▶</button>
+                </div>
+
+                <audio id="audio0" src="lagu/aboutyou.mp3"></audio>
+                <audio id="audio1" src="lagu/high.mp3"></audio>
+                <audio id="audio2" src="lagu/gone.mp3"></audio>
+            </div>
+        </div>
+
+        <div id="tempat">
+            <h2>Rekomendasi Tempat</h2>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3620.189521319669!2d107.61094291459763!3d-6.8910686457672305!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e653f59d15cd%3A0x19110c3178971051!2sAyam%20Geprek%20Bebas!5e0!3m2!1sen!2sid!4v1764413572885!5m2!1sen!2sid"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1789.9987759082778!2d107.61487333423966!3d-6.890125092593455!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e7005ce1ff7f%3A0xc1d8360fead13962!2sAyam%20Tobat!5e0!3m2!1sen!2sid!4v1764413505198!5m2!1sen!2sid"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2529.0726490737275!2d107.6140558520806!3d-6.888612079334635!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e79b7bd9dd87%3A0xac67d2c479f16919!2sRM%20Betuah!5e0!3m2!1sen!2sid!4v1764413640269!5m2!1sen!2sid"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d591.97559075748!2d107.61681574142159!3d-6.89218338284984!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e6519c285359%3A0x546fd8fdb4f3e3ee!2sBebek%20Ali%20Borme!5e0!3m2!1sen!2sid!4v1764413922190!5m2!1sen!2sid"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <H3>Informasi Mengenai tempat</H3>
+            <p>1. Ayam Geprek Tobat = Dengan modal 15ribu bisa menambah nasi sepuasnya dan juga kerupuk gratis</p>
+            <p>2. Ayam Geprek Tobat = Ada paket 10 ribu sudah bisa dapet nasi dan ayam dan juga per tambah nasi itu 3
+                ribu dan es TEH 2ribu</p>
+            <p>3. RM Betuah = disini Harganya Murah Murah tapi kalau mau woryth it beli aja menu Dakar sudah dapet Telur
+                Abon dan Nasi</p>
+            <p>4. Bebek Ali Borne = disini bebeknya enak banget dan juga murah Dengan harga 20ribu buat bebek</p>
+        </div>
+        <center>
+            <button class="btn"><a href="blog.html">Kembali</a></button>
+        </center>
+</body>
+
+</html>

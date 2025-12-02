@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Footer</title>
+    <link rel="stylesheet" href="css/footer.css">
+</head>
+
+<body>
+    <footer>
+        <div class="footer-col" id="col-1">
+            <p>&copy; 2025 Putu Eka, Clay Daniel HS</p>
+        </div>
+        <div class="footer-col" id="col-2">
+            <p><b>Navigation</b></p>
+            <ul class="footer-nav">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+        <div class="footer-col" id="col-3">
+            <p><b>Form Feedback</b></p>
+            <form class="footer-form" onsubmit="kirim()">
+                <div class="form-group">
+                    <label for="footer-nama">Nama:</label>
+                    <input type="text" id="footer-nama" name="nama" required>
+                </div>
+                <div class="form-group">
+                    <label for="footer-pesan">Pesan:</label>
+                    <textarea id="footer-pesan" name="pesan" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="footer-penerima">Penerima:</label>
+                    <select id="footer-penerima" name="penerima" required>
+                        <option value="">-- Pilih --</option>
+                        <option value="eka">Eka</option>
+                        <option value="clay">Clay</option>
+                        <option value="daniel">Daniel</option>
+                    </select>
+                </div>
+                <button type="submit" class="form-submit">Kirim</button>
+            </form>
+        </div>
+    </footer>
+    <script src="formscript.js"></script>
+</body>
+
+</html>

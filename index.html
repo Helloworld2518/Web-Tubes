@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/home.css">
+    <script src="assets/JQuery/jquery-3.7.1.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/footer.css">
+</head>
+
+<body>
+    <div class="site-header">
+        <nav class="navbar">
+            <div class="navbar-container">
+                <a href="#" class="navbar-brand">ITHB Experience</a>
+                <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                    <img src="assets/menu.svg" alt="Menu" class="hamburger-icon">
+                </button>
+                <ul class="nav-links">
+                    <li><a href="#" class="nav-link">Home</a></li>
+                    <li><a href="aboutus.html" class="nav-link">About Us</a></li>
+                    <li><a href="#gallery" class="nav-link">Gallery</a></li>
+                    <li><a href="blog.html" class="nav-link">Blog</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                    <li>
+                        <div class="cct clock-container">
+                            <div class="icon-circle">
+                                <img src="assets/clock.svg">
+                            </div>
+                            <div class="time-text" id="clock">
+                                --.-- --
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+
+            </div>
+        </nav>
+    </div>
+    <header id="header1">
+        <div id="Gambar">
+            <ul>
+                <div>
+                    <li>
+                        <p>EKA</p>
+                        <a href="#"><img src="GAMBARHOME/eka.JPG" alt=""></a>
+                    </li>
+                </div>
+                <div>
+                    <li>
+                        <p>CLAY</p>
+                        <a href="#"><img src="GAMBARHOME/clay.png" alt=""></a>
+                    </li>
+                </div>
+                <div>
+                    <li>
+                        <p>DANIEL</p>
+                        <a href="#"><img src="GAMBARHOME/daniel.jpg" alt=""></a>
+                    </li>
+                </div>
+            </ul>
+        </div>
+    </header>
+    <article class="AboutUs">
+        <div id="deskripsi">
+            <div class="profil">
+                <img src="GAMBARHOME/eka.JPG" alt="">
+                <div class="info">
+                    <h1>Putu Eka Adi Saputra - 1125011</h1>
+                    <p>Nama Saya Putu Eka Adi Saputra saya memiliki ketertarikan di bidang cyber security dan jaringan.
+                        Saya memiliki hobi mengotak
+                        atik komputer dan juga bermain games. Saya berkuliah di ITHB karena saya ingin mengambil
+                        sertifikat
+                        CCNA ketika saya sudah semester akhir karena saya tertarik dengan sertifikasi itu...</p>
+                </div>
+            </div>
+
+            <div class="profil">
+                <img src="GAMBARHOME/clay.png" alt="">
+                <div class="info">
+                    <h1>Clay Othniel Yonathan - 1125015</h1>
+                    <p>Nama saya Clay Othniel Yonathan
+                        saya memiliki ketertarikan terhadap dunia teknologi dan kreativitas.
+                        hobi bermain game dan memotret keseharian di kampus.
+                        minat yang kuat untuk membuat game sendiri di masa depan... </p>
+                </div>
+            </div>
+
+            <div class="profil">
+                <img src="GAMBARHOME/daniel.jpg" alt="">
+                <div class="info">
+                    <h1>Daniel Hamonangan Simatupang - 1125051</h1>
+                    <p>Nama saya Daniel Hamonangan Simatupang. Saya merupakan individu yang memiliki semangat tinggi
+                        untuk
+                        mempelajari hal-hal baru dan beradaptasi dengan cepat terhadap berbagai tantangan. Saya selalu
+                        berusaha
+                        memberikan hasil kerja yang maksimal pada setiap tugas maupun proyek. Apabila suatu pekerjaan
+                        memerlukan
+                        penggunaan aplikasi atau perangkat yang belum saya kuasai, saya akan mempelajarinya secara
+                        mandiri
+                        agar
+                        dapat mencapai hasil yang optimal...</p>
+                </div>
+            </div>
+        </div>
+    </article>
+    <br>
+    <h1 class="GalTitle">Gallery</h1>
+    <div class="Gallery">
+        <br>
+        <div>
+            <div class="Album" onclick="openAlbum('album1')">
+                <img src="GAMBARHOME/ClayNSOP4.jpg" class="cover"
+                    data-images="GAMBARHOME/ClayNSOP4.jpg,GAMBARHOME/ClayNSOP1.jpg,GAMBARHOME/ClayNSOP2.jpg,GAMBARHOME/EkaNSOP2.jpg,GAMBARHOME/EkaNSOP1.jpg,GAMBARHOME/ClayNSOP3.jpg">
+                <br>
+                <p>NSOP</p>
+            </div>
+            <div class="Album" onclick="openAlbum('album2')">
+                <img src="GAMBARHOME/DanielHBO1.JPG" class="cover"
+                    data-images="GAMBARHOME/DanielHBO1.JPG,GAMBARHOME/DanielHBO2.JPG,GAMBARHOME/EkaHBO.JPG,GAMBARHOME/EkaHBO2.JPG,GAMBARHOME/ClayHBO1.JPG,GAMBARHOME/ClayHBO2.JPG">
+                <br>
+                <p>HBO</p>
+            </div>
+            <div class="Album" onclick="openAlbum('album3')">
+                <img src="GAMBARHOME/Class1.jpg" class="cover"
+                    data-images="GAMBARHOME/Class1.jpg,GAMBARHOME/class2.jpg,GAMBARHOME/Class3.jpg,GAMBARHOME/Class4.jpg,GAMBARHOME/Class5.jpg,GAMBARHOME/Class6.jpg">
+                <br>
+                <p>Class</p>
+            </div>
+            <div class="Album" onclick="openAlbum('album4')">
+                <img src="GAMBARHOME/Chill1.jpg" class="cover"
+                    data-images="GAMBARHOME/Chill1.jpg,GAMBARHOME/Chill2.jpg,GAMBARHOME/Chill3.jpg,GAMBARHOME/Chill4.jpg,GAMBARHOME/Chill5.jpg,GAMBARHOME/Chill6.jpg">
+                <br>
+                <p>Chill</p>
+            </div>
+        </div>
+
+        <div id="album1" class="popup">
+            <span class="close" onclick="closeAlbum('album1')">X</span>
+            <div class="popupContent">
+                <img src="GAMBARHOME/ClayNSOP4.jpg">
+                <img src="GAMBARHOME/ClayNSOP1.jpg">
+                <img src="GAMBARHOME/ClayNSOP2.jpg">
+                <img src="GAMBARHOME/EkaNSOP2.jpg">
+                <img src="GAMBARHOME/EkaNSOP1.jpg">
+                <img src="GAMBARHOME/ClayNSOP3.jpg">
+            </div>
+        </div>
+        <div id="album2" class="popup">
+            <span class="close" onclick="closeAlbum('album2')">X</span>
+            <div class="popupContent">
+                <img src="GAMBARHOME/DanielHBO1.JPG">
+                <img src="GAMBARHOME/DanielHBO2.JPG">
+                <img src="GAMBARHOME/EkaHBO.JPG">
+                <img src="GAMBARHOME/EkaHBO2.JPG">
+                <img src="GAMBARHOME/ClayHBO1.JPG">
+                <img src="GAMBARHOME/ClayHBO2.JPG">
+            </div>
+        </div>
+        <div id="album3" class="popup">
+            <span class="close" onclick="closeAlbum('album3')">X</span>
+            <div class="popupContent">
+                <img src="GAMBARHOME/Class1.jpg">
+                <img src="GAMBARHOME/class2.jpg">
+                <img src="GAMBARHOME/Class3.jpg">
+                <img src="GAMBARHOME/Class4.jpg">
+                <img src="GAMBARHOME/Class5.jpg">
+                <img src="GAMBARHOME/Class6.jpg">
+            </div>
+        </div>
+        <div id="album4" class="popup">
+            <span class="close" onclick="closeAlbum('album4')">X</span>
+            <div class="popupContent">
+                <img src="GAMBARHOME/Chill1.jpg">
+                <img src="GAMBARHOME/Chill2.jpg">
+                <img src="GAMBARHOME/Chill3.jpg">
+                <img src="GAMBARHOME/Chill4.jpg">
+                <img src="GAMBARHOME/Chill5.jpg">
+                <img src="GAMBARHOME/Chill6.jpg">
+            </div>
+        </div>
+    </div>
+    <footer id="contact">
+        <div class="footer-col" id="col-1">
+            <p>&copy; 2025 Putu Eka, Clay Daniel HS</p>
+        </div>
+        <div class="footer-col" id="col-2">
+            <p><b>Navigation</b></p>
+            <ul class="footer-nav">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+        <div class="footer-col" id="col-3">
+            <p><b>Form Feedback</b></p>
+            <form class="footer-form" onsubmit="kirim()">
+                <div class="form-group">
+                    <label for="footer-nama">Nama:</label>
+                    <input type="text" id="footer-nama" name="nama" required>
+                </div>
+                <div class="form-group">
+                    <label for="footer-pesan">Pesan:</label>
+                    <textarea id="footer-pesan" name="pesan" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="footer-penerima">Penerima:</label>
+                    <select id="footer-penerima" name="penerima" required>
+                        <option value="">-- Pilih --</option>
+                        <option value="eka">Eka</option>
+                        <option value="clay">Clay</option>
+                        <option value="daniel">Daniel</option>
+                    </select>
+                </div>
+                <button type="submit" class="form-submit">Kirim</button>
+            </form>
+        </div>
+    </footer>
+</body>
+<script src="js/home.js"></script>
+<script src="js/script.js"></script>
+
+</html>
