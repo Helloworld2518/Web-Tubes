@@ -7,8 +7,8 @@ function kirim() {
   var wa_clay = "http://wa.me/+6285174078350?text=";
   var wa_daniel = "http://wa.me/+6281380214250?text=";
 
-  if (pesan == "" || nama == "") {
-    alert("Nama atau pesan tidak boleh kosong");
+  if (pesan.length < 10 || nama.length < 4) {
+    alert("Nama atau pesan tidak boleh ngasal!");
   } else {
     if (penerima == "eka") {
       window.open(wa_eka + encodeURIComponent(pesanfinal));
