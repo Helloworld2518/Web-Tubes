@@ -90,3 +90,13 @@
     margin-top: 40px;
     line-height: 1.5;
 }
+
+@media screen and (max-width: 640px){
+    #deskripsi{
+        flex-direction: column;
+    }
+    .profil{
+        display: flex;
+        flex-direction: column;
+    }
+}
