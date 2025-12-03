@@ -46,7 +46,7 @@
 /*BAGIAN GAMBAR DAN NAMA*/
 #Gambar {
     position: relative;
-    top: -30px;
+    top: -80px;
     display: flex;
     justify-content: center;
     opacity: 0;
@@ -141,24 +141,6 @@ h1 {
 
 @media screen and (max-width: 720px) {
 
-    #NAV {
-    backdrop-filter: blur(10px);
-    position: fixed;
-    top: 20px;
-    width: 90%;
-    height: 40px;
-    display: flex;
-    justify-content: center;
-    animation: fadeInUp 1s ease forwards;
-    animation-delay: 0.2s;
-    opacity: 0;
-    z-index: 10;
-    border-radius: 16px;
-    background-color: rgb(255, 255, 255 , 0.3);
-    align-items: center;
-    }
-
-    
     #header1 h1{
         text-align: center;
     }
@@ -187,11 +169,15 @@ h1 {
 .Gallery{
     display: grid;
     gap: 40px;
-    background-color: grey;
+    background-image: url("../isigaleri/gedunglama.jpg");
+    background-size: cover;
+    background-position: center;
     padding-top: 30px;
 }
 .GalTitle{
     text-align: center;
+    position: 'relative';
+    top: -10px;
 }
 .Album{
     width: 45%;
@@ -252,46 +238,4 @@ overflow: hidden;
     font-weight: bold;
     cursor: pointer;
 }
-/* bagian Blog */
-.Blog {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    opacity: 0;
-    animation: fadeInUp 1.5s ease forwards;
-    animation-delay: 0.6s;
-    z-index: 1;
-    padding: 10px;
-}
-.BTitle{
-    text-align: center;
-}
 
-.Blog ul {
-    display: flex;
-}
-
-.Blog li {
-    list-style: none;
-    margin: 50px;
-}
-
-.Blog img {
-    object-fit: cover;
-    width: 200px;
-    height: 300px;
-    border-radius: 16px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.Blog img:hover {
-    transform: scale(1.05); 
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
-}
-
-@media screen and (min-width: 721px) and (max-width: 1024px) {
-    /* Navigasi lebih lebar agar proporsional di tablet */
-
-    
-}
