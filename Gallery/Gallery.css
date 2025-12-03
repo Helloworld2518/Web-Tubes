@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*Animasi Awal*/
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/*BAGIAN BANNER*/
+#header1 {
+    background-image: url('../isigaleri/ithb.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    color: white;
+    padding-top: 150px;
+    overflow: hidden;
+}
+
+#header1::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 0;
+}
+
+/*BAGIAN NAVIGASI*/
+#NAV {
+    backdrop-filter: blur(10px);
+    position: fixed;
+    top: 20px;
+    width: 40%;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    animation: fadeInUp 1s ease forwards;
+    animation-delay: 0.2s;
+    opacity: 0;
+    z-index: 10;
+    border-radius: 16px;
+    background-color: rgb(255, 255, 255 , 0.3);
+    align-items: center;
+}
+
+#NAV ul {
+    opacity: 0;
+    animation: fadeInUp 1s ease forwards;
+    animation-delay: 0.3s;
+}
+
+#NAV ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    transition: 0.3s;
+}
+
+#NAV ul li:hover {
+    transform: scale(1.2);
+}
+
+#NAV a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+/*Gallery*/
+#gallery {
+    width: 90%;
+    max-width: 1200px;
+    margin: 50px auto;
+}
+h1 {
+    text-align: center;
+    font-size: 5rem;
+    font-weight: bold;
+    margin-bottom: 40px;
+    letter-spacing: 2px;
+    color: white;
+    text-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    animation: fadeInUp 1.2s ease forwards;
+    opacity: 0;
+}
+
+
+/*Grid*/
+.gambar {
+    column-count: 5;
+    column-gap: 20px;
+}
+
+.gambar img {
+    width: 100%;
+    margin-bottom: 20px;
+    border-radius: 16px;
+    display: block;
+    break-inside: avoid;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    transition: 0.3s;
+    animation: fadeInUp 1s ease forwards;
+    opacity: 0;
+}
+
+/*Hover*/
+.gambar img:hover {
+    transform: scale(1.03);
+}
+
+/*Responsive*/
+@media (max-width: 900px) {
+    .gambar {
+        column-count: 4;
+    }
+}
+
+@media (max-width: 600px) {
+    .gambar {
+        column-count: 3;
+    }
+}

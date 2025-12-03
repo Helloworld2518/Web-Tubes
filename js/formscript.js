@@ -2,7 +2,7 @@ function kirim() {
   var penerima = document.getElementById("footer-penerima").value;
   var pesan = document.getElementById("footer-pesan").value;
   var nama = document.getElementById("footer-nama").value;
-  var pesanfinal = "Halo, nama saya: " + nama + "Pesan: " + pesan;
+  var pesanfinal = "Halo, nama saya: " + nama + "\nPesan: " + pesan;
   var wa_eka = "http://wa.me/+6281901242626?text=";
   var wa_clay = "http://wa.me/+6285174078350?text=";
   var wa_daniel = "http://wa.me/+6281380214250?text=";
